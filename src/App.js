@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { Box, Container } from "@mui/material";
 import {
@@ -42,7 +42,19 @@ function App() {
   const navigate = useNavigate();
   const userInfo = { isSuperAdmin: true };
 
+  const currentRoute = window.location.pathname;
+  const showSidebar = userInfo.isSuperAdmin && currentRoute !== "/account";
+
   const [selectedMenu, setSelectedMenu] = useState(1);
+
+  const updateSelectedItem = () => {
+    const item = menuItems.find((item) => item.route === currentRoute);
+    setSelectedMenu(item?.id);
+  };
+
+  useEffect(() => {
+    updateSelectedItem();
+  }, [currentRoute]);
 
   const handleMenuItemSelect = (item) => {
     setSelectedMenu(item.id);
@@ -54,7 +66,7 @@ function App() {
       <Navbar />
       <main className="py-3">
         <Container sx={{ display: "flex", flexDirection: "row" }}>
-          {userInfo.isSuperAdmin && (
+          {showSidebar && (
             <Sidebar
               menuItems={menuItems}
               selectedItem={selectedMenu}
