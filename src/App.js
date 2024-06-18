@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Container } from "@mui/material";
+import { Outlet, useNavigate } from "react-router-dom";
+import { Box, Container } from "@mui/material";
 import {
   AccountBalance,
   AdminPanelSettings,
@@ -15,7 +15,7 @@ const menuItems = [
   {
     id: 1,
     label: "Cases",
-    route: "/cases",
+    route: "/",
     icon: Folder,
   },
   {
@@ -61,6 +61,10 @@ function App() {
               selectItemHandler={handleMenuItemSelect}
             />
           )}
+
+          <Box sx={{ padding: 2, width: "100%" }}>
+            <Outlet />
+          </Box>
         </Container>
       </main>
     </div>
