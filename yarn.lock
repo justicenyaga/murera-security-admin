@@ -4154,12 +4154,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"apisauce@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "apisauce@npm:3.0.1"
+"apisauce@npm:3.0.0":
+  version: 3.0.0
+  resolution: "apisauce@npm:3.0.0"
   dependencies:
-    axios: "npm:^1.4.0"
-  checksum: 10c0/7ed882d09b68f83fab47fca146a2c91a198398233844050818e914bcb92e1783078de55dd20320b62f8484e5ce6669c3487d03c5d7e79ac44bf82ac285ec632f
+    axios: "npm:^0.27.2"
+  checksum: 10c0/4aa538e46772ff2dcab2f6ec6fd57ce5cab014f6e819e435ed8b3de8f1067999536df7eb0b173b92b15c258c0de556886dc57a110c841e6d63012987dad12f86
   languageName: node
   linkType: hard
 
@@ -4419,14 +4419,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.4.0":
-  version: 1.7.2
-  resolution: "axios@npm:1.7.2"
+"axios@npm:^0.27.2":
+  version: 0.27.2
+  resolution: "axios@npm:0.27.2"
   dependencies:
-    follow-redirects: "npm:^1.15.6"
+    follow-redirects: "npm:^1.14.9"
     form-data: "npm:^4.0.0"
-    proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/cbd47ce380fe045313364e740bb03b936420b8b5558c7ea36a4563db1258c658f05e40feb5ddd41f6633fdd96d37ac2a76f884dad599c5b0224b4c451b3fa7ae
+  checksum: 10c0/76d673d2a90629944b44d6f345f01e58e9174690f635115d5ffd4aca495d99bcd8f95c590d5ccb473513f5ebc1d1a6e8934580d0c57cdd0498c3a101313ef771
   languageName: node
   linkType: hard
 
@@ -7068,7 +7067,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.0.0, follow-redirects@npm:^1.15.6":
+"follow-redirects@npm:^1.0.0, follow-redirects@npm:^1.14.9":
   version: 1.15.6
   resolution: "follow-redirects@npm:1.15.6"
   peerDependenciesMeta:
@@ -10003,7 +10002,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:^5.14.1"
     "@testing-library/react": "npm:^13.0.0"
     "@testing-library/user-event": "npm:^13.2.1"
-    apisauce: "npm:^3.0.1"
+    apisauce: "npm:3.0.0"
     bootstrap: "npm:^5.3.3"
     eslint: "npm:8.x"
     eslint-plugin-react: "npm:^7.34.2"
@@ -11618,13 +11617,6 @@ __metadata:
     forwarded: "npm:0.2.0"
     ipaddr.js: "npm:1.9.1"
   checksum: 10c0/c3eed999781a35f7fd935f398b6d8920b6fb00bbc14287bc6de78128ccc1a02c89b95b56742bf7cf0362cc333c61d138532049c7dedc7a328ef13343eff81210
-  languageName: node
-  linkType: hard
-
-"proxy-from-env@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "proxy-from-env@npm:1.1.0"
-  checksum: 10c0/fe7dd8b1bdbbbea18d1459107729c3e4a2243ca870d26d34c2c1bcd3e4425b7bcc5112362df2d93cc7fb9746f6142b5e272fd1cc5c86ddf8580175186f6ad42b
   languageName: node
   linkType: hard
 
