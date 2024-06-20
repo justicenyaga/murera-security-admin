@@ -6,6 +6,7 @@ export default {
   light: "#f8f4f4",
   medium: "#6e6969",
   primary: "#fc5c65",
+  red: "#ff0000",
   secondary: "#4ecdc4",
   white: "#fff",
 };

@@ -45,7 +45,6 @@ function App() {
   const { user } = useAuth();
 
   const currentRoute = window.location.pathname;
-  const showSidebar = user?.isSuperAdmin && currentRoute !== "/account";
 
   const [selectedMenu, setSelectedMenu] = useState(1);
 
@@ -69,7 +68,7 @@ function App() {
       <Navbar />
       <main className="py-3">
         <Container sx={{ display: "flex", flexDirection: "row" }}>
-          {showSidebar && (
+          {user?.isSuperAdmin && (
             <Sidebar
               menuItems={menuItems}
               selectedItem={selectedMenu}
@@ -77,7 +76,7 @@ function App() {
             />
           )}
 
-          <Box sx={{ padding: 2, width: "100%" }}>
+          <Box>
             <Outlet />
           </Box>
         </Container>
