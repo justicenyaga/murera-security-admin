@@ -11,6 +11,8 @@ import {
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 
+import useAuth from "./hooks/useAuth";
+
 const menuItems = [
   {
     id: 1,
@@ -40,10 +42,10 @@ const menuItems = [
 
 function App() {
   const navigate = useNavigate();
-  const userInfo = { isSuperAdmin: true };
+  const { user } = useAuth();
 
   const currentRoute = window.location.pathname;
-  const showSidebar = userInfo.isSuperAdmin && currentRoute !== "/account";
+  const showSidebar = user?.isSuperAdmin && currentRoute !== "/account";
 
   const [selectedMenu, setSelectedMenu] = useState(1);
 
@@ -53,6 +55,7 @@ function App() {
   };
 
   useEffect(() => {
+    !user?._id && navigate("/login");
     updateSelectedItem();
   }, [currentRoute]);
 
