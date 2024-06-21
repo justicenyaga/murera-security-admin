@@ -8,8 +8,12 @@ const changeEmail = (data) => client.put(endpoint + "/change-email", data);
 
 const changePhone = (data) => client.put(endpoint + "/change-phone", data);
 
+const changePassword = (data) =>
+  client.put(endpoint + "/change-password", data);
+
 export default {
   changeEmail,
   changePhone,
+  changePassword,
   getUser,
 };
