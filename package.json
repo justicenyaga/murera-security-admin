@@ -16,12 +16,15 @@
     "apisauce": "3.0.0",
     "bootstrap": "^5.3.3",
     "formik": "^2.4.6",
+    "mui-tel-input": "^5.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.0",
-    "yup": "^1.4.0"
+    "yup": "^1.4.0",
+    "yup-password": "^0.4.0",
+    "yup-phone-lite": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
