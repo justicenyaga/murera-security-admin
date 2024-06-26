@@ -13,10 +13,12 @@ import ChangeEmailPage from "./pages/ChangeEmailPage";
 import ChangePhonePage from "./pages/ChangePhonePage";
 import ChangePasswordPage from "./pages/ChangePasswordPage";
 import ErrorPage from "./pages/ErrorPage";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import LoginPage from "./pages/LoginPage";
 import OfficersPage from "./pages/OfficersPage";
 import StationsPage from "./pages/StationsPage";
 import ProfilePage from "./pages/ProfilePage";
+import PasswordResetPage from "./pages/PasswordResetPage";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
     path: "/login",
     element: <LoginPage />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPasswordPage />,
+  },
+  {
+    path: "/password-reset",
+    element: <PasswordResetPage />,
   },
 ]);
 
