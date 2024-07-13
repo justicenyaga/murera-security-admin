@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Box, Container } from "@mui/material";
 import {
   AccountBalance,
@@ -65,7 +67,7 @@ function App() {
   };
 
   return (
-    <div>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Navbar />
       <main className="py-3">
         <Container sx={{ display: "flex", flexDirection: "row" }}>
@@ -87,7 +89,7 @@ function App() {
           </Box>
         </Container>
       </main>
-    </div>
+    </LocalizationProvider>
   );
 }
 
