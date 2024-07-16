@@ -12,6 +12,7 @@ import CasesPage from "./pages/CasesPage";
 import ChangeEmailPage from "./pages/ChangeEmailPage";
 import ChangePhonePage from "./pages/ChangePhonePage";
 import ChangePasswordPage from "./pages/ChangePasswordPage";
+import EditOfficerPage from "./pages/EditOfficerPage";
 import ErrorPage from "./pages/ErrorPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import LoginPage from "./pages/LoginPage";
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { index: true, element: <CasesPage /> },
       { path: "/admins", element: <AdminsPage /> },
       { path: "/officers", element: <OfficersPage /> },
+      { path: "/officers/:id", element: <EditOfficerPage /> },
       { path: "/stations", element: <StationsPage /> },
     ],
   },
