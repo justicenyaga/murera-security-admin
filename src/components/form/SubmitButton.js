@@ -4,7 +4,7 @@ import { useFormikContext } from "formik";
 import PropTypes from "prop-types";
 import colors from "../../config/colors";
 
-const SubmitButton = ({ title, ...rest }) => {
+const SubmitButton = ({ title, style, ...rest }) => {
   const { handleSubmit } = useFormikContext();
 
   return (
@@ -23,6 +23,7 @@ const SubmitButton = ({ title, ...rest }) => {
           bgcolor: colors.primary,
           transform: "scale(1.05)",
         },
+        ...style,
       }}
       {...rest}
     >
@@ -34,6 +35,7 @@ const SubmitButton = ({ title, ...rest }) => {
 SubmitButton.propTypes = {
   disabled: PropTypes.bool,
   icon: PropTypes.string,
+  style: PropTypes.object,
   title: PropTypes.string,
 };
 
